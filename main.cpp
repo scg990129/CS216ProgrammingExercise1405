@@ -70,6 +70,8 @@ int main() {
     }
 
     // "%c %Z": Thu Dec 21 00:00:00 2000 PST
-    std::cout << put_time(std::localtime(&time), "%B%e, %Y") << std::endl;
+    std::cout << put_time(std::localtime(&time), "%B ") <<
+                                                       tm.tm_mday
+    << put_time(std::localtime(&time), ", %Y") << std::endl;
     return 0;
 }
